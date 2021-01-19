@@ -1,0 +1,9 @@
+# google provider
+google_project=""
+google_region=""
+google_zone=""
+
+# dns_managed_zone
+google_dns_managed_zone_domain_name="example.com."
+google_dns_record_set_cname_target="example.com."
+google_dns_record_set_txt_content="Hello world"
