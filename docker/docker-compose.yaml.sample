@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  tf:
+    build: .
+    env_file:
+    - variables.env
+    volumes:
+      - ..:/data
+      - ./volumes/home:/root
+      - [PATH TO SERVICE ACCOUNT JSON]:/variables/service-account.json:ro
