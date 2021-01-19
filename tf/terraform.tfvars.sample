@@ -1,3 +1,5 @@
+# https://www.terraform.io/docs/configuration/variables.html
+
 # google provider
 google_project=""
 google_region=""

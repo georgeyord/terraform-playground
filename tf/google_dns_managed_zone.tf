@@ -1,3 +1,4 @@
+# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dns_managed_zone
 resource "google_dns_managed_zone" "yord-tf-dns" {
   name        = "yord-domain"
   dns_name    = var.google_dns_managed_zone_domain_name
@@ -8,6 +9,7 @@ resource "google_dns_managed_zone" "yord-tf-dns" {
   }
 }
 
+# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dns_record_set
 resource "google_dns_record_set" "yord-tf-dns-recordset-txt" {
   name         = google_dns_managed_zone.yord-tf-dns.dns_name
   managed_zone = google_dns_managed_zone.yord-tf-dns.name
