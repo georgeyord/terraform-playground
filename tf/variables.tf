@@ -15,6 +15,13 @@ variable "google_zone" {
   description = "GCloud zone the resources will be created in"
 }
 
+variable "google_common_tags" {
+  type        = object({
+    owner = string
+  })
+  description = "GCloud common tags"
+}
+
 variable "google_dns_managed_zone_domain_name" {
   type        = string
   description = "GCloud managed DNS Zone Domain name"

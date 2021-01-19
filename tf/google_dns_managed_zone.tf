@@ -4,9 +4,7 @@ resource "google_dns_managed_zone" "yord-tf-dns" {
   dns_name    = var.google_dns_managed_zone_domain_name
   description = "Yord's DNS zone"
 
-  labels = {
-    yord  = "true"
-  }
+  labels = var.google_common_tags
 }
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dns_record_set
@@ -15,7 +13,7 @@ resource "google_dns_record_set" "yord-tf-dns-recordset-txt" {
   managed_zone = google_dns_managed_zone.yord-tf-dns.name
   type         = "TXT"
   ttl          = 300
-  rrdatas = [
+  rrdatas      = [
     var.google_dns_record_set_txt_content
   ]
 }

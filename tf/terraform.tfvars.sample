@@ -5,6 +5,11 @@ google_project=""
 google_region=""
 google_zone=""
 
+# google tags
+google_common_tags={
+  owner = "CHANGEME"
+}
+
 # dns_managed_zone
 google_dns_managed_zone_domain_name="example.com."
 google_dns_record_set_cname_target="example.com."
