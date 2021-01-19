@@ -24,7 +24,7 @@ resource "google_dns_record_set" "yord-tf-dns-recordset-cname" {
   type         = "CNAME"
   ttl          = 300
   rrdatas      = [
-    "${var.google_dns_record_set_cname_target}"
+    var.google_dns_record_set_cname_target
   ]
 }
 resource "google_dns_record_set" "mx" {
