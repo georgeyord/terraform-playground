@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   tf:
+    image: gcloud-tf-go:latest
     build: .
     env_file:
     - variables.env
